@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160923">
+<title>VEXO | 1st Anniversary Invitation</title>
+<style>
+:root{--bg:#100819;--panel:#1d1030;--purple:#8d52d8;--lav:#d6baff;--gold:#d7b879;--white:#fff9ff}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:radial-gradient(ellipse at 50% 0%,#382052 0%,#160c22 48%,#0d0712 100%);color:var(--white);font-family:Georgia,'Times New Roman',serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background-image:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(2px 2px at 70% 20%,#d7b879,transparent),radial-gradient(1px 1px at 80% 70%,#fff,transparent),radial-gradient(1px 1px at 35% 80%,#d6baff,transparent);background-size:190px 190px;z-index:0}
+main{position:relative;z-index:1}.hero{min-height:100svh;display:grid;place-items:center;padding:28px 18px}.invite{width:min(100%,720px);text-align:center;position:relative;padding:clamp(28px,6vw,64px) clamp(20px,7vw,72px);border:1px solid rgba(215,184,121,.62);outline:1px solid rgba(215,184,121,.2);outline-offset:8px;background:linear-gradient(145deg,rgba(54,30,78,.92),rgba(17,9,27,.96));box-shadow:0 30px 100px #0009;border-radius:3px;overflow:hidden}
+.invite:before,.invite:after{content:"✦";position:absolute;color:var(--gold);font-size:24px}.invite:before{top:18px;left:20px}.invite:after{bottom:18px;right:20px}
+.eyebrow{letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font:11px Arial,sans-serif}.monogram{width:62px;height:62px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;color:var(--lav);font-size:22px;letter-spacing:.08em}
+h1{font-size:clamp(32px,7vw,58px);font-weight:400;letter-spacing:.08em;margin:15px 0 8px}.subtitle{font-size:clamp(16px,3vw,22px);font-style:italic;color:var(--lav);margin:0}.rule{width:90px;height:1px;background:var(--gold);margin:28px auto}.intro{font-size:17px;line-height:1.7;color:#e8dff0}.guest{font-size:clamp(24px,5vw,36px);color:var(--gold);margin:12px 0 6px}.designation{font:13px Arial,sans-serif;color:#d7c8e5;letter-spacing:.04em}.details{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0}.detail{border:1px solid #765b8c;padding:17px 12px;background:#ffffff08}.detail small{display:block;color:var(--gold);font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-bottom:9px}.detail strong{font-size:15px;font-weight:400;line-height:1.5}.btn{display:inline-block;border:1px solid var(--gold);background:linear-gradient(110deg,#7040a7,#4c286f);color:white;padding:14px 25px;letter-spacing:.12em;text-transform:uppercase;font:11px Arial,sans-serif;cursor:pointer;text-decoration:none;transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px #0006}.secondary{background:transparent;color:var(--lav);border-color:#9478ac}.section{width:min(100% - 32px,720px);margin:0 auto 28px;padding:35px 28px;background:#1a1026dd;border:1px solid #674b7b;text-align:center}.section h2{font-weight:400;font-size:29px;color:var(--lav);margin:0 0 12px}.section p{color:#d8cde1;line-height:1.7}.rsvp{display:grid;gap:13px;text-align:left;margin-top:24px}.rsvp label{font:11px Arial,sans-serif;color:var(--gold);letter-spacing:.12em;text-transform:uppercase}.rsvp input,.rsvp select,.rsvp textarea{width:100%;margin-top:7px;padding:13px;background:#100819;border:1px solid #765b8c;color:white;font:14px Arial,sans-serif;border-radius:2px}.rsvp .btn{width:100%;margin-top:5px}.note{font:11px Arial,sans-serif;color:#a998b8;margin-top:14px}.footer{text-align:center;padding:22px;color:#a998b8;font:10px Arial,sans-serif;letter-spacing:.2em}
+#envelopeScreen{position:fixed;inset:0;background:radial-gradient(ellipse at center,#3c2057,#100819 70%);z-index:5;display:grid;place-items:center;padding:24px;transition:opacity .8s,visibility .8s}#envelopeScreen.hidden{opacity:0;visibility:hidden}.envelope-wrap{text-align:center;width:min(100%,420px)}.envelope{height:230px;position:relative;margin:0 auto 28px;perspective:900px}.env-back{position:absolute;inset:25px 0 0;background:#5b347b;border:1px solid var(--gold);box-shadow:0 18px 40px #0008}.env-flap{position:absolute;left:0;right:0;top:25px;height:125px;background:linear-gradient(135deg,#9c6bc2,#593273);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform 1s;z-index:2}.env-front{position:absolute;left:0;right:0;bottom:0;height:180px;background:linear-gradient(145deg,#754a98,#3a2054);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-bottom:1px solid var(--gold);z-index:3}.seal{position:absolute;z-index:4;left:50%;top:105px;transform:translateX(-50%);width:55px;height:55px;border-radius:50%;background:radial-gradient(circle,#e6cb91,#9e7440);color:#321b43;display:grid;place-items:center;font-size:20px;box-shadow:0 4px 16px #0007}.open .env-flap{transform:rotateX(180deg)}.open .seal{opacity:0;transition:.3s}.open .env-front{transform:translateY(35px);transition:1s}.open .env-back{transform:translateY(-25px);transition:1s}.fadein{animation:rise 1.2s both}@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@media(max-width:520px){.details{grid-template-columns:1fr}.section{padding:28px 20px}.invite{padding:42px 24px}}
+</style>
+</head>
+<body>
+<div id="envelopeScreen">
+  <div class="envelope-wrap">
+    <div class="eyebrow">A special invitation</div>
+    <div class="envelope" id="envelope"><div class="env-back"></div><div class="env-flap"></div><div class="env-front"></div><div class="seal">V</div></div>
+    <h2 style="font-weight:400;color:#e8d8f8">A celebration awaits</h2>
+    <button class="btn" id="openBtn">Open Invitation</button>
+  </div>
+</div>
+<main>
+<section class="hero">
+  <div class="invite fadein">
+    <div class="monogram">V</div>
+    <div class="eyebrow">Cordially invites you to celebrate</div>
+    <h1>VEXO</h1>
+    <p class="subtitle">Business School (Pvt) Ltd</p>
+    <div class="rule"></div>
+    <div class="eyebrow">One year of vision, growth & achievement</div>
+    <h2 style="font-size:clamp(25px,5vw,38px);font-weight:400;margin:15px 0;color:#f7edff">1st Anniversary Celebrations</h2>
+    <p class="intro">We would be honoured by your presence as we celebrate this special milestone and the journey ahead.</p>
+    <div class="rule"></div>
+    <div class="eyebrow">With great pleasure, we invite</div>
+    <div class="guest" id="guestName">Our Distinguished Guest</div>
+    <div class="designation" id="guestRole">To join us for this memorable occasion</div>
+    <div class="details">
+      <div class="detail"><small>Date & Time</small><strong id="eventDate">To be announced</strong></div>
+      <div class="detail"><small>Venue</small><strong id="eventVenue">To be announced</strong></div>
+    </div>
+    <p class="intro" style="font-style:italic">Your presence will make our celebration truly memorable.</p>
+    <a class="btn" href="#rsvp">Kindly Respond</a>
+  </div>
+</section>
+<section class="section" id="rsvp">
+  <div class="eyebrow">We look forward to welcoming you</div>
+  <h2>Kindly Confirm Your Attendance</h2>
+  <p>Please let us know whether you will be joining us for the celebration.</p>
+  <form class="rsvp" id="rsvpForm">
+    <label>Full name<input id="rsvpName" name="name" required></label>
+    <label>Email or phone number<input id="rsvpContact" name="contact" required></label>
+    <label>Will you attend?
+      <select id="attendance" name="attendance" required><option value="">Select an option</option><option>Yes, I will attend</option><option>Sorry, I cannot attend</option></select>
+    </label>
+    <label>Message (optional)<textarea id="message" name="message" rows="3" placeholder="Write a message..."></textarea></label>
+    <button class="btn" type="submit">Submit RSVP</button>
+  </form>
+  <div class="note" id="formStatus">RSVP collection will be activated when your Google Sheets endpoint is connected.</div>
+</section>
+<div class="footer">VEXO BUSINESS SCHOOL · CELEBRATING ONE YEAR</div>
+</main>
+<script>
+/* EDIT THESE DETAILS BEFORE PUBLISHING */
+const EVENT = {
+  date: "Add event date and time",
+  venue: "Add venue and address",
+  rsvpEndpoint: "" // Paste your Google Apps Script Web App URL here after setup
+};
+/* Guest details are read from the personal invitation URL:
+   ?guest=Mr.%20Sajith%20Caldera&role=Founder%20%26%20CEO%20%E2%80%93%20Bitnomi
+*/
+const params = new URLSearchParams(location.search);
+const guest = params.get("guest");
+const role = params.get("role");
+document.getElementById("guestName").textContent = guest || "Our Distinguished Guest";
+document.getElementById("guestRole").textContent = role || "To join us for this memorable occasion";
+document.getElementById("eventDate").textContent = EVENT.date;
+document.getElementById("eventVenue").textContent = EVENT.venue;
+document.getElementById("rsvpName").value = guest || "";
+document.getElementById("openBtn").addEventListener("click",()=>{
+  document.getElementById("envelope").classList.add("open");
+  setTimeout(()=>document.getElementById("envelopeScreen").classList.add("hidden"),850);
+});
+document.getElementById("rsvpForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const status=document.getElementById("formStatus");
+  const payload={name:document.getElementById("rsvpName").value,contact:document.getElementById("rsvpContact").value,attendance:document.getElementById("attendance").value,message:document.getElementById("message").value,invitedGuest:guest||"",submittedAt:new Date().toISOString()};
+  if(!EVENT.rsvpEndpoint){
+    status.textContent="Preview mode: your form is ready, but RSVP storage is not connected yet. Add your Google Apps Script URL in the EVENT settings.";
+    return;
+  }
+  try{
+    await fetch(EVENT.rsvpEndpoint,{method:"POST",mode:"no-cors",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    status.textContent="Thank you. Your response has been submitted.";
+    e.target.reset();
+  }catch(err){status.textContent="We couldn't submit your response. Please contact the VEXO team.";}
+});
+</script>
+</body>
+</html>
